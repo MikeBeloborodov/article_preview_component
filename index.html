@@ -10,15 +10,47 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Article preview component</title>
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    Shift the overall look and feel by adding these wonderful touches to
-    furniture in your home Ever been in a room and felt like something was
-    missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple
-    tips to help you make any room feel complete. Michelle Appleton 28 Jun 2020
-    Share
+    <main>
+      <h1 class="sr-only">Article preview component</h1>
+      <article class="card">
+        <header class="card__header">
+          <img
+            class="card__image"
+            src="images/drawers.jpg"
+            alt="Picture of a drawer with a flower pot and a few photo frames."
+            width="660"
+            height="528"
+          />
+        </header>
+        <div class="card__content">
+          <h2 class="card__title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+          <p class="card__text">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete. 28 Jun 2020 Share
+          </p>
+        </div>
+        <footer class="card__footer">
+          <img
+            class="card__footer-avatar"
+            src="images/avatar-michelle.jpg"
+            alt="Michelle"
+            width="175"
+            height="175"
+          />
+          <p class="card__footer-name">Michelle Appleton</p>
+          <time class="intro__date" datetime="2020-06-28">28 Jun 2020</time>
+          <img class="card__footer-share" src="images/icon-share.svg" />
+        </footer>
+      </article>
+    </main>
   </body>
 </html>
