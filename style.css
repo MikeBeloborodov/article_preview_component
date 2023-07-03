@@ -44,7 +44,6 @@ button {
   max-width: 45.625rem;
   margin: 0 23px;
   border-radius: 10px;
-  overflow: hidden;
   background-color: #FFF;
 }
 
@@ -54,12 +53,15 @@ button {
   height: 12.5rem;
   object-fit: cover;
   object-position: 0 -15px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card__body {
   display: flex;
   flex-direction: column;
-  gap: 29px;
+  gap: 1.813rem;
   padding: 32px 32px 20px;
 }
 
@@ -90,7 +92,8 @@ button {
 
 .card__share-container {
   position: absolute;
-  width: calc(100% + 64px); /* add card padding */
+  width: calc(100% + 64px);
+  /* add card padding */
   height: calc(100% + 34px);
   background-color: var(--clr-share-container);
   top: -14px;
@@ -98,6 +101,9 @@ button {
   display: flex;
   align-items: center;
   padding: 0 32px;
+  z-index: 2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .hidden {
@@ -154,7 +160,7 @@ button {
   padding: 7px;
   background-color: var(--clr-background);
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media screen and (min-width: 800px) {
@@ -178,5 +184,28 @@ button {
   .card__image {
     height: 100%;
     object-position: 0 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .card__share-container {
+    width: 245px;
+    height: 56px;
+    top: -80px;
+    left: 227px;
+    border-radius: 8px;
+  }
+
+  .card__share-container::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: var(--clr-share-container);
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 25px);
+    z-index: -1;
+    rotate: 45deg;
   }
 }
