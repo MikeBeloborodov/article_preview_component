@@ -1,30 +1,98 @@
 :root {
-  --clr-light-grayish-blue: hsl(210, 46%, 95%);
-  --clr-grayish-blue: hsl(212, 23%, 69%);
+  --clr-background: hsl(210, 46%, 95%);
+  --clr-text-main: hsl(212, 23%, 69%);
   --clr-desaturated-dark-blue: hsl(214, 17%, 51%);
-  --clr-very-dark-grayish-blue:  hsl(217, 19%, 35%);
+  --clr-text-accent:  hsl(217, 19%, 35%);
 
   --fw-medium: 500;
   --fw-bold: 700;
-  --font-size-13: 0.813rem /* 13px */
+  --font-size-13: 0.813rem; /* 13px */
 }
 
 body {
-  background-color: var(--clr-light-grayish-blue);
+  background-color: var(--clr-background);
 }
 
 /* Visually hidden, but available for screen reader */
 
 .sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
   border: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
   -webkit-clip-path: inset(50%) !important;
   clip-path: inset(50%) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
   white-space: nowrap !important;
+}
+
+.card {
+  margin: 73px 23px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #FFF;
+}
+
+.card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: 0 -15px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 32px 32px 29px;
+}
+
+.card__title {
+  color: var(--clr-text-accent);
+  font-size: 1.04rem;
+  line-height: 1.5;
+}
+
+.card__text {
+  color: var(--clr-text-main);
+  font-size: 0.864rem;
+  line-height: 1.5;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px 20px;
+}
+
+.card__footer-name {
+  color: var(--clr-text-accent);
+  font-weight: var(--fw-bold);
+  font-size: 0.864rem;
+}
+
+.card__footer-date {
+  color: var(--clr-text-main);
+  font-size: var(--font-size-13);
+}
+
+.card__footer-avatar {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.card__footer-image_container {
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  border: none;
+  border-radius: 50%;
+  padding: 7px;
+  background-color: var(--clr-background);
+  cursor: pointer;
 }
