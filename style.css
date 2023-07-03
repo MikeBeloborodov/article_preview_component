@@ -6,17 +6,15 @@
 
   --fw-medium: 500;
   --fw-bold: 700;
-  --font-size-13: 0.813rem;
-  /* 13px */
 }
 
 body {
-  background-color: var(--clr-background);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  background-color: var(--clr-background);
 }
 
 /* Visually hidden, but available for screen reader */
@@ -36,28 +34,28 @@ body {
 }
 
 .card {
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #FFF;
   display: flex;
   flex-direction: column;
   max-width: 45.625rem;
   margin: 0 23px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #FFF;
 }
 
 .card__image {
   width: 100%;
+  min-width: 17.75rem;
   height: 12.5rem;
   object-fit: cover;
   object-position: 0 -15px;
-  min-width: 17.75rem;
 }
 
 .card__body {
-  padding: 32px 32px 20px;
   display: flex;
   flex-direction: column;
   gap: 29px;
+  padding: 32px 32px 20px;
 }
 
 .card__content {
@@ -84,6 +82,12 @@ body {
   gap: 1rem;
 }
 
+.card__footer-name_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.313rem;
+}
+
 .card__footer-name {
   color: var(--clr-text-accent);
   font-weight: var(--fw-bold);
@@ -92,7 +96,7 @@ body {
 
 .card__footer-date {
   color: var(--clr-text-main);
-  font-size: var(--font-size-13);
+  font-size: 0.864rem;
 }
 
 .card__footer-avatar {
@@ -101,7 +105,7 @@ body {
   border-radius: 50%;
 }
 
-.card__footer-image_container {
+.card__footer-icon_container {
   width: 2rem;
   height: 2rem;
   margin-left: auto;
@@ -115,13 +119,14 @@ body {
 @media screen and (min-width: 800px) {
   .card {
     flex-direction: row;
+    box-shadow: 1px 40px 100px 0px rgba(0, 0, 0, 0.1);
   }
 
   .card__body {
-    padding: 30px 40px 30px;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    padding: 30px 40px 30px;
   }
 
   .card__title {
