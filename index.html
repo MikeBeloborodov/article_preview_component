@@ -40,6 +40,23 @@
             </p>
           </div>
           <footer class="card__footer">
+            <aside class="card__share-container hidden" id="share-container">
+              <p class="card__share-container-text">Share</p>
+              <div class="card__buttons-container">
+                <button class="share-btn">
+                  <span class="sr-only">Share on Facebook</span>
+                  <img src="images/icon-facebook.svg" alt="Facebook icon" />
+                </button>
+                <button class="share-btn">
+                  <span class="sr-only">Share on Twitter</span>
+                  <img src="images/icon-twitter.svg" alt="Twitter icon" />
+                </button>
+                <button class="share-btn">
+                  <span class="sr-only">Share on Pinterest</span>
+                  <img src="images/icon-pinterest.svg" alt="Pinterest icon" />
+                </button>
+              </div>
+            </aside>
             <img
               class="card__footer-avatar"
               src="images/avatar-michelle.jpg"
@@ -53,7 +70,7 @@
                 >28 Jun 2020</time
               >
             </div>
-            <button class="card__footer-icon_container">
+            <button class="card__footer-icon_container" id="share-toggle-button">
               <span class="sr-only">Share</span>
               <img
                 class="card__footer-share_icon"
@@ -65,5 +82,6 @@
         </div>
       </article>
     </main>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 :root {
   --clr-background: hsl(210, 46%, 95%);
   --clr-text-main: hsl(212, 23%, 69%);
-  --clr-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --clr-share-container: hsl(214, 17%, 51%);
   --clr-text-accent: hsl(217, 19%, 35%);
 
   --fw-medium: 500;
@@ -15,6 +15,11 @@ body {
   align-items: center;
   height: 100vh;
   background-color: var(--clr-background);
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Visually hidden, but available for screen reader */
@@ -80,6 +85,41 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
+}
+
+.card__share-container {
+  position: absolute;
+  width: calc(100% + 64px); /* add card padding */
+  height: calc(100% + 34px);
+  background-color: var(--clr-share-container);
+  top: -14px;
+  left: -32px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.card__share-container-text {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--clr-background);
+  letter-spacing: 0.3rem;
+  margin-right: 0.625rem;
+}
+
+.card__buttons-container {
+  display: flex;
+  gap: 0.313rem;
+}
+
+.share-btn {
+  background-color: transparent;
+  border: none;
 }
 
 .card__footer-name_container {
@@ -113,7 +153,8 @@ body {
   border-radius: 50%;
   padding: 7px;
   background-color: var(--clr-background);
-  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 @media screen and (min-width: 800px) {
