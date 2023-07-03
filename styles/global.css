@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -28,4 +32,8 @@ blockquote {
 img {
   width: 100%;
   height: auto;
+}
+
+button {
+  cursor: pointer;
 }

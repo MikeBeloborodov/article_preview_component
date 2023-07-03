@@ -14,12 +14,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--clr-background);
   overflow: hidden;
-}
-
-button {
-  cursor: pointer;
+  background-color: var(--clr-background);
 }
 
 /* Visually hidden, but available for screen reader */
@@ -51,18 +47,18 @@ button {
   width: 100%;
   min-width: 17.75rem;
   height: 12.5rem;
-  object-fit: cover;
-  object-position: 0 -15px;
-  overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  object-fit: cover;
+  object-position: 0 -0.313rem;
+  overflow: hidden;
 }
 
 .card__body {
   display: flex;
   flex-direction: column;
   gap: 1.813rem;
-  padding: 32px 32px 20px;
+  padding: 2rem 2rem 1.25rem;
 }
 
 .card__content {
@@ -84,26 +80,25 @@ button {
 }
 
 .card__footer {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 1rem;
-  position: relative;
 }
 
 .card__share-container {
   position: absolute;
-  width: calc(100% + 64px);
-  /* add card padding */
-  height: calc(100% + 34px);
-  background-color: var(--clr-share-container);
-  top: -14px;
-  left: -32px;
+  top: -0.875rem;
+  left: -2rem;
+  z-index: 2;
   display: flex;
   align-items: center;
-  padding: 0 32px;
-  z-index: 2;
-  border-bottom-left-radius: 10px;
+  width: calc(100% + 4rem); /* add card padding */
+  height: calc(100% + 2.125rem);
   border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 0 2rem;
+  background-color: var(--clr-share-container);
 }
 
 .hidden {
@@ -111,11 +106,11 @@ button {
 }
 
 .card__share-container-text {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  color: var(--clr-background);
-  letter-spacing: 0.3rem;
   margin-right: 0.625rem;
+  color: var(--clr-background);
+  font-size: 0.78rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
 }
 
 .card__buttons-container {
@@ -124,8 +119,14 @@ button {
 }
 
 .share-btn {
-  background-color: transparent;
   border: none;
+  border-radius: 10px;
+  padding: 0.313rem;
+  background-color: transparent;
+}
+
+.share-btn:hover {
+  outline: 1px solid #fff;
 }
 
 .card__footer-name_container {
@@ -151,16 +152,20 @@ button {
   border-radius: 50%;
 }
 
-.card__footer-icon_container {
+.card__footer-share_button {
+  position: relative;
+  z-index: 3;
   width: 2rem;
   height: 2rem;
   margin-left: auto;
   border: none;
   border-radius: 50%;
-  padding: 7px;
+  padding: 0.438rem;
   background-color: var(--clr-background);
-  position: relative;
-  z-index: 3;
+}
+
+.card__footer-share_button:hover {
+  outline: 1px solid var(--clr-text-accent);
 }
 
 @media screen and (min-width: 800px) {
@@ -173,7 +178,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    padding: 30px 40px 30px;
+    padding: 1.875rem 2.5rem 1.875rem;
   }
 
   .card__title {
@@ -183,29 +188,29 @@ button {
 
   .card__image {
     height: 100%;
-    object-position: 0 0;
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    object-position: 0 0;
   }
 
   .card__share-container {
-    width: 245px;
-    height: 56px;
-    top: -80px;
-    left: 227px;
+    top: -5rem;
+    left: 14.188rem;
+    width: 15.313rem;
+    height: 3.5rem;
     border-radius: 8px;
   }
 
   .card__share-container::after {
     content: '';
-    width: 50px;
-    height: 50px;
-    background-color: var(--clr-share-container);
     position: absolute;
-    top: 10px;
-    left: calc(50% - 25px);
+    top: 0.625rem;
+    left: 6rem;
     z-index: -1;
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: var(--clr-share-container);
     rotate: 45deg;
   }
 }
